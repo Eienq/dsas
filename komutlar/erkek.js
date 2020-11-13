@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const Gamedig = require('gamedig');
 exports.run = async (client, message, args) => {
-  let ip = "185.193.165.74"
+  let ip = "185.193.165.235"
  
   
   Gamedig.query({

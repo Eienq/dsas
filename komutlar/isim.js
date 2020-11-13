@@ -18,7 +18,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "cssunucubilgi",
+  name: "gametracker",
   description: "Bot i",
   usage: "istatistik"
 };
