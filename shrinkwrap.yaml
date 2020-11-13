@@ -11,6 +11,7 @@ dependencies:
   moment-duration-format: 2.3.2
   quick.db: 7.1.1
   request: 2.88.2
+  request-promise: 4.2.6
   simple-youtube-api: 5.2.1
   snekfetch: 4.0.4
   ytdl-core: 2.1.5
@@ -628,6 +629,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-j4OH8f6Qg2bGuWfRiltT2HYGx0e1QcBTrK9KAHNMwMZdQnDZFk0ZSYIpADjYCB3U12nicC5tVJwSIhwOWjb4RQ==
+  /bluebird/3.7.2:
+    dev: false
+    resolution:
+      integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
   /bmp-js/0.1.0:
     dev: false
     resolution:
@@ -1912,6 +1917,30 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ZS5w8CpKFinUzOwW3c83oPeVXoNsrLsaCoLtJvAClH135j/R77RuymhiSErhm2lKcwSCIpmvIWSbDkIfAqKQlA==
+  /request-promise-core/1.1.4:
+    dependencies:
+      lodash: 4.17.20
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    peerDependencies:
+      request: ^2.34
+    resolution:
+      integrity: sha512-TTbAfBBRdWD7aNNOoVOBH4pN/KigV6LyapYNNlAPA8JwbovRti1E88m3sYAwsLi5ryhPKsE9APwnjFTgdUjTpw==
+  /request-promise/4.2.6:
+    dependencies:
+      bluebird: 3.7.2
+      request-promise-core: 1.1.4
+      stealthy-require: 1.1.1
+      tough-cookie: 2.5.0
+    deprecated: 'request-promise has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142'
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    peerDependencies:
+      request: ^2.34
+    resolution:
+      integrity: sha512-HCHI3DJJUakkOr8fNoCc73E5nU5bqITjOYFMDrKHYOXWXrgD/SBaC7LjwuPymUprRyuF06UK7hd/lMHkmUXglQ==
   /request/2.88.2:
     dependencies:
       aws-sign2: 0.7.0
@@ -2065,6 +2094,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+  /stealthy-require/1.1.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
   /string-to-stream/1.1.1:
     dependencies:
       inherits: 2.0.4
@@ -2373,6 +2408,7 @@ specifiers:
   moment-duration-format: ^2.2.2
   quick.db: ^7.1.1
   request: ^2.88.2
+  request-promise: ^4.2.6
   simple-youtube-api: ^5.2.1
   snekfetch: ^4.0.4
   ytdl-core: ^2.1.5
