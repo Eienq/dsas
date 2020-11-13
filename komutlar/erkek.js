@@ -11,20 +11,22 @@ exports.run = async (client, message, args) => {
     
 }).then((state) => {
     const embed = new Discord.MessageEmbed()
-   .setColor('RANDOM')
-    .setFooter(``,client.user.avatarURL)
+   .setColor('BLUE')
     .setAuthor('Csgo Sunucu Bilgi')
-    .setDescription(`**Sunucu Adı:** ${state.name}_\n\n**Online Kişi: ** ${state.players.length}/${state.maxplayers} \n\n **Map: ** ${state.map}\n\n **Ping**: **${state.ping}`)
-    message.channel.send(embed).then(fc => fc.delete(7000));
+    .addField(`Sunucu Adı`,` ${state.name}`)
+    .addField(`Online Kişi`,`${state.players.length}/${state.maxplayers}`,true)
+    .addField(`Oynanan Map`,`${state.map}`,true)
+    .addField(`Sunucu Pingi`,`${state.ping}`)
+    message.channel.send(embed)
     
 }).catch((error) => {
-    message.channel.send("Server Offline").then(fc => fc.delete(7000));
-    console.log("Server Çevrim Dışı");
+    message.channel.send("Server Offline")
 });
   
   };
 
-exports.conf = {  enabled: true,
+exports.conf = {  
+  enabled: true,
   guildOnly: false,
   aliases: ['durum'],
   permLevel: 0
