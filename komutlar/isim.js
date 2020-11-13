@@ -1,38 +1,24 @@
-const discord = require('discord.js')
-const db = require('quick.db')
-
-exports.run = async(client, message, args) => {
-
-  let yetkiyok = new discord.MessageEmbed()
- .setDescription('<a:basarisiz:757851005483221022> **Bu komudu kullanabilmek için** <@&YETKİLİ ROL İD> **yetkisine sahip olmalısın!**')
- .setColor('RED')
- if (!message.member.roles.cache.get("YETKİLİ ROL İD")) return message.channel.send(yetkiyok) 
+const Discord = require("discord.js");
+const Gamedig = require('gamedig');
+exports.run = async (client, message, args) => {
  
-  let member = message.mentions.members.first();
-if (!member) return message.channel.send(new discord.MessageEmbed().setColor('RED').setDescription(`<a:basarisiz:757851005483221022>  İsim Değiştireceğin Kullanıcıyı Belirtmelisin ! `))
-let isim = args[1]
-if (!isim) return message.channel.send(new discord.MessageEmbed().setColor('RED').setDescription(`<a:basarisiz:757851005483221022>  İsmini Belirtmelisin ! `))
-let yaş = args[2]
-if (!yaş) return message.channel.send(new discord.MessageEmbed().setColor('RED').setDescription(`<a:basarisiz:757851005483221022>  Yaşını Belirtmelisin ! `))
-let tag = "TAGINIZ"
-  member.setNickname(`${tag} ${isim} | ${yaş}`)
+    const embed = new Discord.MessageEmbed()
+   .setColor('BLUE')
+    .setImage(`https://cache.gametracker.com/server_info/185.193.165.235:27015/b_560_95_1.png`) 
+    message.channel.send(embed)
 
-const nick = new discord.MessageEmbed()
-.setColor('BLUE')
-.setDescription(`**${member} kullanıcının ismini  \`${tag} ${isim} | ${yaş}\` istediğiniz gibi ayarladım**`)
-.setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
-message.channel.send(nick)
+  
+  };
 
-
-}
-exports.conf = {
+exports.conf = {  
   enabled: true,
-  guildonly: false,
-  aliases: ['i'],
-  permlevel: 0
-}
+  guildOnly: false,
+  aliases: ['gt'],
+  permLevel: 0
+};
+
 exports.help = {
-  name: 'isim',
-  description: 'erkek olarak kayıt eder',
-  usage: 'İsim Değiştirmeye yarar qmi'
-}
+  name: "cssunucubilgi",
+  description: "Bot i",
+  usage: "istatistik"
+};

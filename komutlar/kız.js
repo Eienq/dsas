@@ -20,7 +20,7 @@ let member = message.mentions.members.first();
 
    member.roles.remove('KAYITSIZ ROL İD') //Kayıt Edince Alınacak Rol
    member.roles.add('1. KIZ ROL İD') //Kayıt Edince Verilecek Rol1
-   member.roles.add('2. KIZ ROL İD') //Kayıt Edince Verilecek Rol2
+   member.roles.add('2. KIZ ROL İD') //Kayıt Edince Verilecek Rol2https://cache.gametracker.com/server_info/185.193.165.235:27015/b_560_95_1.png
 
   
 const kayıtsohbet = new Discord.MessageEmbed()
