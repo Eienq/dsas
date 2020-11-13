@@ -14,6 +14,7 @@ dependencies:
   request-promise: 4.2.6
   simple-youtube-api: 5.2.1
   snekfetch: 4.0.4
+  timeago.js: 4.0.2
   ytdl-core: 2.1.5
 packages:
   /@babel/runtime/7.10.1:
@@ -2205,6 +2206,10 @@ packages:
       node: '>=4.5'
     resolution:
       integrity: sha512-g2SVs5QIxvo6OLp0GudTqEf05maawKUxXru104iaayWA09551tFCTI8f1Asb4lPfkBr91k07iL4c11XO3/b0tA==
+  /timeago.js/4.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-a7wPxPdVlQL7lqvitHGGRsofhdwtkoSXPGATFuSOA2i1ZNQEPLrGnj68vOp2sOJTCFAQVXPeNMX/GctBaO9L2w==
   /timm/1.6.2:
     dev: false
     resolution:
@@ -2411,4 +2416,5 @@ specifiers:
   request-promise: ^4.2.6
   simple-youtube-api: ^5.2.1
   snekfetch: ^4.0.4
+  timeago.js: ^4.0.2
   ytdl-core: ^2.1.5

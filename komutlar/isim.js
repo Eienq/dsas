@@ -2,8 +2,6 @@ const Discord = require('discord.js')
 const rp = require('request-promise')
 const cheerio = require('cheerio')
 const servers = require('../data/servers.json')
-const thumbs = require('../data/thumbnails.json')
-const getAvailableServers = require('./help').getAvailableServers
 const getGraphURL = require('./data').getGraphURL
 
 async function getOnlinePlayers(serverIP) {
