@@ -1,10 +1,10 @@
 {
-  "//1": "pythonic",
-  "//2": "pythonic",
+  "//1": "SYNX",
+  "//2": "SYNX",
   "//3": "updating this file will download and update your packages",
   "name": "hello-express",
   "version": "0.0.1",
-  "description": "pythonic",
+  "description": "SYNX",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
