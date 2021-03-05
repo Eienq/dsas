@@ -1,13 +1,12 @@
 const Discord = require("discord.js");
+const ayarlar = require("../ayarlar.json");
 const Database = require("../Helpers/Database");
 
 exports.run = async (client, message, args) => {
-  let kanal = "808850097608851470";
-
-  if (message.channel.id !== kanal) return message.react("809011050527719474");
+  let logger = ayarlar.logyetkili;
 
   if (
-    !message.member.roles.cache.get("809111646320590869") &
+    !message.member.roles.cache.get(logger) &
     !message.member.hasPermission("ADMINISTRATOR")
   )
     return message.react("809011050527719474");

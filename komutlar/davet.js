@@ -1,10 +1,9 @@
 const Discord = require("discord.js");
 const Database = require("../Helpers/Database");
+const ayarlar = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
-  let kanal = "808850097608851470";
-
-  if (message.channel.id !== kanal) return message.react("809011050527719474");
+  let logger = ayarlar.logyetkili;
 
   if (
     !message.member.roles.cache.get("809111646320590869") &
