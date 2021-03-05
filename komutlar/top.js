@@ -43,7 +43,7 @@ exports.conf = {
   permLevel: 0
 };
 exports.help = {
-  name: "top10",
+  name: "top5",
   description: "Sunucuda en çok davet yapmış 10 kişiyi sıralar",
-  usage: "top10"
+  usage: "top"
 };

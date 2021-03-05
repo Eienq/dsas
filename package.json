@@ -7,7 +7,7 @@
   "description": "SYNX",
   "main": "bot.js",
   "scripts": {
-    "start": "node shard.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "bad-words": "^3.0.3",
