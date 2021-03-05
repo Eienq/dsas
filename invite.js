@@ -33,12 +33,12 @@ client.on("guildCreate", (guild) => {
 
 client.on("guildMemberAdd", (member) => {
     const db = new Database("./Servers/" + member.guild.id, "Invites"), gi = (Invites.get(member.guild.id) || new Collection()).clone(), settings = new Database("./Servers/" + member.guild.id, "Settings").get("settings") || {};
-    var guild = member.guild, fake = (Date.now() - member.createdAt) / (1000 * 60 * 60 * 24) <= 3 ? true : false, channel = guild.channels.cache.get(ayarlar.kanalid);
-    guild.fetchInvites().then(invites => {
-        var invite = invites.find(_i => gi.has(_i.code) && gi.get(_i.code).uses < _i.uses) || gi.find(_i => !invites.has(_i.code)) || guild.vanityURLCode;
+    var guild = member.guild, fake = (Date.now() - member.createdAt) / (1000 * 60 * 60 * 24) <= 3 ? true : false, channel = guild.channels.cache.get(settings.Channel);
+    guild.fetchInvites().then(invites => {        var invite = invites.find(_i => gi.has(_i.code) && gi.get(_i.code).uses < _i.uses) || gi.find(_i => !invites.has(_i.code)) || guild.vanityURLCode;
         Invites.set(member.guild.id, invites);
         var content = `${member} is joined the server.`, total = 0, regular = 0, _fake = 0, bonus = 0;
-  
+        if(invite == guild.vanityURLCode) content = settings.defaultMessage ? settings.defaultMessage : `-member- is joined the server! But don't know that invitation he came up with. :tada:`;
+        else content = settings.welcomeMessage ? settings.welcomeMessage : `The -member-, joined the server using the invitation of the -target-.`;
 
         if (invite.inviter) { 
             db.set(`invites.${member.id}.inviter`, invite.inviter.id); 
@@ -60,7 +60,7 @@ client.on("guildMemberAdd", (member) => {
         db.set(`invites.${member.id}.isfake`, fake);
 
         if(channel){
-       channel.send(new Discord.MessageEmbed().setColor('GrefreshREEN').setDescription(`**${member.user.tag}** adlı kullanıcı sunucuya katıldı. Kullanıcıyı davet eden **${invite.inviter.tag}** kişisininin \`${total + bonus}\` daveti oldu.`)
+       channel.send(new Discord.MessageEmbed().setColor('GREEN').setDescription(`**${member.user.tag}** adlı kullanıcı sunucuya katıldı. Kullanıcıyı davet eden **${invite.inviter.tag}** kişisininin \`${total + bonus}\` daveti oldu.`)
                     ) }
     }).catch();
 });

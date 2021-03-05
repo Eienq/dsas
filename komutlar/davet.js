@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
     !message.member.roles.cache.get("809111646320590869") &
     !message.member.hasPermission("ADMINISTRATOR")
   )
-    return message.react("809011050527719474");
+    return message.channel.send('Komudu kullanmak için gerekli yetkiye sahip değilsin');
 
   let victim;
   if (message.mentions.users.first()) {

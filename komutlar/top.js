@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
     !message.member.roles.cache.get(logger) &
     !message.member.hasPermission("ADMINISTRATOR")
   )
-    return message.react("809011050527719474");
+    return message.channel.send('Komudu kullanmak için gerekli yetkiye sahip değilsin');
 
   const db = new Database("./Servers/" + message.guild.id, "Invites");
   var data = db.get(`invites`) || {};
