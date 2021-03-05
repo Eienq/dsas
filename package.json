@@ -7,16 +7,16 @@
   "description": "SYNX",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node shard.js"
   },
   "dependencies": {
     "bad-words": "^3.0.3",
     "can": "^6.6.0",
     "canvas": "^2.6.1",
     "chalk": "^4.1.0",
-    "db": "^3.3.0",
+    "db": "^3.3.1",
     "discord-bots-api": "^0.0.2",
-    "discord.js": "^12.4.0",
+    "discord.js": "^12.5.1",
     "express": "^4.17.1",
     "quick.db": "^7.1.2",
     "fs": "^0.0.2",
@@ -32,8 +32,7 @@
     "passport-oauth2": "^1.5.0",
     "simple-youtube-api": "^5.2.1",
     "weather-js": "^2.0.0",
-    "wio.db": "^4.0.9",
-    "ytdl-core": "^4.0.2"
+    "ytdl-core": "^4.4.5"
   },
   "engines": {
     "node": "12.x"

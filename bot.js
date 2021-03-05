@@ -3,7 +3,6 @@ const express = require("express");
 const http = require("http");
 const fs = require("fs");
 const db = require("quick.db");
-const wiodb = require("wio.db");
 const ms2 = require("parse-ms");
 const ms = require("ms");
 const client = new Discord.Client(); //
@@ -140,5 +139,5 @@ client.login(ayarlar.token).then(
 );
 
 client.on("ready", () => {
-  client.channels.cache.get("").join();
+  client.channels.cache.get(ayarlar.botses).join();
 }); 
