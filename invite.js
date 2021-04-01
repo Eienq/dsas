@@ -60,7 +60,7 @@ client.on("guildMemberAdd", (member) => {
         db.set(`invites.${member.id}.isfake`, fake);
 
         if(channel){
-       channel.send(new Discord.MessageEmbed().setColor('GREEN').setDescription(`**${member.user.tag}** adlı kullanıcı sunucuya katıldı. Kullanıcıyı davet eden **${invite.inviter.tag}** kişisininin \`${total + bonus}\` daveti oldu.`)
+       channel.send(new Discord.MessageEmbed().setColor('BLACK').setDescription(`**${member.user.tag}** adlı kullanıcı sunucuya katıldı. Kullanıcıyı davet eden **${invite.inviter.tag}** kişisininin \`${total + bonus}\` daveti oldu.`)
                     ) }
     }).catch();
 });
@@ -88,7 +88,7 @@ client.on("guildMemberRemove", (member) => {
     db.add(`invites.${data.inviter}.leave`, 1);
      if(channel){
         let user = client.users.cache.get(data.inviter)
-     	channel.send(new Discord.MessageEmbed().setColor('RED').setDescription(`**${member.user.tag}** adlı kullanıcı sunucumuzdan ayrıldı. Kullanıcıyı davet eden **${user.tag}** kişisinin \`${Number(total) + Number(bonus)}\` daveti kaldı!`))
+     	channel.send(new Discord.MessageEmbed().setColor('BLACK').setDescription(`**${member.user.tag}** adlı kullanıcı sunucumuzdan ayrıldı. Kullanıcıyı davet eden **${user.tag}** kişisinin \`${Number(total) + Number(bonus)}\` daveti kaldı!`))
      }
 });
 
