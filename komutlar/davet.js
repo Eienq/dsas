@@ -3,14 +3,6 @@ const Database = require("../Helpers/Database");
 const ayarlar = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
-  let logger = ayarlar.logyetkili;
-
-  if (
-    !message.member.roles.cache.get("809111646320590869") &
-    !message.member.hasPermission("ADMINISTRATOR")
-  )
-    return message.channel.send('Komudu kullanmak için gerekli yetkiye sahip değilsin');
-
   let victim;
   if (message.mentions.users.first()) {
     victim = message.mentions.users.first();
@@ -22,7 +14,7 @@ exports.run = async (client, message, args) => {
     return message.channel
       .send(
         new Discord.MessageEmbed()
-          .setColor("#00ff51")
+          .setColor("BLUE")
           .setDescription(
             `Davetini Görmek İstediğiniz Kişiyi Etiketlemelisiniz!`
           )
@@ -35,7 +27,7 @@ exports.run = async (client, message, args) => {
     return message.channel
       .send(
         new Discord.MessageEmbed()
-          .setColor("#ff0000")
+          .setColor("BLUE")
           .setDescription(`Aradığınız Kullanıcı Sunucuda Bulunmamaktadır!`)
           .setTimestamp()
           .setFooter(`${message.author.tag} Tarafından Kullanıldı!`)
@@ -59,7 +51,7 @@ exports.run = async (client, message, args) => {
         0}\` **Bonus:** \`${data.bonus || 0}\` **Çıkanlar:** \`${data.leave ||
         0}\` **Sahte Olanlar:** \`${data.fake || 0}\`)`
     )
-    .setColor("#f6c03d");
+    .setColor("BLUE");
   message.channel.send(embed);
 };
 exports.conf = {
