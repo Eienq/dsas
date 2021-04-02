@@ -107,4 +107,3 @@ global.onUpdateInvite = (guildMember, guild, total) => {
     });
 }
 client.login(ayarlar.token)
-

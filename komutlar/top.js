@@ -24,9 +24,9 @@ exports.run = async (client, message, args) => {
     .sort((x, y) => y.Value - x.Value);
 
   var embed = new Discord.MessageEmbed().setColor("BLUE").addField(
-    "En Çok Davet Kasan İlk 5 Kişi",
+    "En Çok Davet Kasan İlk 10 Kişi",
     `** **${list
-      .splice(0, 5)
+      .splice(0, 10)
       .map(
         (item, index) =>
           `\`${index + 1}.\` <@${item.Id}>: \`${item.Value} Davet\``

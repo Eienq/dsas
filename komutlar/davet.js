@@ -52,7 +52,7 @@ exports.run = async (client, message, args) => {
     leave: 0
   };
   var embed = new Discord.MessageEmbed()
-    .setFooter("qmi Tarafından Yapılmıştır.")
+    .setFooter("Erdem Çakıroğlu Tarafından Yapılmıştır.")
     .setDescription(
       `****${victim} Kişisinin Davet İstatikleri****\n\n**Toplam:** \`${(data.total ||
         0) + (data.bonus || 0)}\` (**Düzenli** \`${data.regular ||
